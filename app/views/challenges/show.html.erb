@@ -1,5 +1,5 @@
 <div class="row">
-  <div class="col">
+  <div class="col container">
     <h1><%= @challenge.name %></h1>
 
     <%= raw(render_markdown(@challenge.content)) %>
@@ -18,7 +18,7 @@
         There are no chats yet.
       <% end %>
     </div>
-
-    <%= button_to "New chat", challenge_chats_path(@challenge), class: "btn btn-primary" %>
+    <%= link_to "delete a chat", root_path %>
+    <%= button_to "New chat", challenge_chats_path(@challenge), class: "btn btn-danger" %>
   </div>
 </div>
